@@ -8,7 +8,7 @@ const FormComponent = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://test-deploy-olive-omega.vercel.app/api/submit', {
+      const response = await fetch('https://test-deploy-backend-liard.vercel.app/api/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
