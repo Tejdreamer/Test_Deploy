@@ -7,7 +7,7 @@ const PORT =5000;
 
 
 const corsOptions = {
-  origin: '*',
+  origin: 'https://test-deploy-frontend.vercel.app/',
   methods: ['GET', 'POST'], 
   credentials: true,
 };
@@ -43,23 +43,25 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/api/submit', async (req, res) => {
-  const { name, email } = req.body;
+  // const { name, email } = req.body;
 
-  if (!name || !email) {
-    return res.status(400).json({ message: 'Please provide both name and email.' });
-  }
+  // if (!name || !email) {
+  //   return res.status(400).json({ message: 'Please provide both name and email.' });
+  // }
 
-  try {
+  // try {
     
-    const newSubmission = new FormSubmission({ name, email });
-    await newSubmission.save();
+  //   const newSubmission = new FormSubmission({ name, email });
+  //   await newSubmission.save();
 
     
-    res.status(200).json({ message: 'Form submitted and saved successfully!' });
-  } catch (error) {
-    console.error('Error saving to MongoDB:', error);
-    res.status(500).json({ message: 'An error occurred while saving the data.' });
-  }
+  //   res.status(200).json({ message: 'Form submitted and saved successfully!' });
+  // } catch (error) {
+  //   console.error('Error saving to MongoDB:', error);
+  //   res.status(500).json({ message: 'An error occurred while saving the data.' });
+  // }
+
+  res.status(200).json("Detaiils Submitted");
 });
 
 
