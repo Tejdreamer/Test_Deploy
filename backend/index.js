@@ -5,10 +5,10 @@ const cors = require('cors');
 const app = express();
 const PORT =5000;
 const corsOptions = {
-  origin: 'https://test-deploy-frontend.vercel.app', // Frontend URL without trailing slash
+  origin: '*', 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,  // Allow credentials (cookies)
+  credentials: true,  
 };
 
 app.use(cors(corsOptions));
