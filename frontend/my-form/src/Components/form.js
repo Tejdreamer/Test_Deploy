@@ -13,7 +13,7 @@ const FormComponent = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode:'cors',
+        mode:'no-cors',
         credentials: 'include',
         body: JSON.stringify(data),
       });
