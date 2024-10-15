@@ -6,7 +6,7 @@ const app = express();
 const PORT =5000;
 const corsOptions = {
   origin: 'https://test-deploy-frontend.vercel.app/', 
-  methods: ['GET', 'POST'],
+  methods: ['POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,  
 };
