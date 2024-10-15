@@ -31,6 +31,10 @@ const formSchema = new mongoose.Schema({
 const FormSubmission = mongoose.model('FormSubmission', formSchema);
 
 
+app.get('/',(req,res)=>{
+  res.json("API working")
+})
+
 app.post('/api/submit', async (req, res) => {
   const { name, email } = req.body;
 
