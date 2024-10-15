@@ -7,8 +7,9 @@ const PORT =5000;
 
 
 const corsOptions = {
-  origin: 'https://test-deploy-frontend.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST'], 
+  credentials: true,
 };
 
 
